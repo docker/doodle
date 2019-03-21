@@ -13,15 +13,6 @@ var Width int
 var Height int
 var random *rand.Rand
 
-const confetti_c0 = `.---,
-|   |
-'---'`
-
-const confetti_c1 = `  .
- / \
- \ /
-  '`
-
 const whale_c0 = `xxxxxxxxxxxxxxx##xxxxxxxx.xxxxx
 xxxxxxxxx##x##x##xxxxxxx==xxxxx
 xxxxxx##x##x##x##xxxxxx===xxxxx
@@ -122,8 +113,6 @@ func NewConfetti() *Confetti {
 		Visible: true},
 		Timer:   0,
 		TimeOut: 3}
-	//s.AddCostume(sprite.NewCostume(confetti_c0, 'x'))
-	//s.AddCostume(sprite.NewCostume(confetti_c1, 'x'))
 	s.AddCostume(sprite.NewCostume(whale_c0, 'x'))
 	s.AddCostume(sprite.NewCostume(whale_c0, 'x'))
 	s.X = random.Intn(Width)

@@ -66,10 +66,10 @@ type Flicker struct {
 func NewCake() *Cake {
 	s := &Cake{BaseSprite: sprite.BaseSprite{
 		Visible: true,
-		X:       Width/2 - 20,
 		Y:       Height/2},
 	}
 	s.AddCostume(sprite.NewCostume(birthday_c0, '@'))
+	s.X = Width/2 - s.Width/2
 
 	points := []sprite.Point{
 		sprite.Point{12, 0},
@@ -170,6 +170,11 @@ func main() {
 	cake := NewCake()
 	allSprites.Sprites = append(allSprites.Sprites, cake)
 
+	txt := "Press 'ESC' to quit."
+        c := sprite.NewCostume(txt, '~')
+        text := sprite.NewBaseSprite(Width/2-len(txt)/2, Height-2, c)
+	allSprites.Sprites = append(allSprites.Sprites, text)
+
 mainloop:
 	for {
 		tm.Clear(tm.ColorDefault, tm.ColorDefault)
@@ -177,7 +182,7 @@ mainloop:
 		select {
 		case ev := <-event_queue:
 			if ev.Type == tm.EventKey {
-				if ev.Key == tm.KeyEsc || ev.Ch == 'q' {
+				if ev.Key == tm.KeyCtrlC || ev.Key == tm.KeyEsc || ev.Ch == 'q' {
 					break mainloop
 				}
 			} else if ev.Type == tm.EventResize {

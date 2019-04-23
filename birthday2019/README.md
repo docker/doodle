@@ -8,5 +8,5 @@ To try it out, run:
 
 `docker run -it --rm docker/surprise`
 
-Complete source can be found [here](https://github.com/docker/doodle/birthday2019).
+Complete source can be found [here](https://github.com/docker/doodle).
 

@@ -13,7 +13,7 @@ FROM scratch AS release-linux
 COPY --from=builder /project/cheers /cheers
 ENTRYPOINT ["/cheers"]
 
-FROM microsoft/nanoserver AS release-windows
+FROM mcr.microsoft.com/windows/nanoserver:1809 AS release-windows
 COPY --from=builder /project/cheers /cheers.exe
 ENTRYPOINT ["\\cheers.exe"]
 

@@ -20,7 +20,7 @@ With buildx, you'll first need to create a cross platform `builder` instance wit
 You only need to create one builder instance, and should not need to create new ones with subsequent
 builds.  To create and push the multi-arch image to Docker Hub, use the command:
 
-`cd <doodle> && docker buildx build -f Dockerfile.cross --platform linux/amd64,linux/arm64,linux/arm/v8,linux/s390x,linux/ppc64le,windows/amd64 -t <usename>/doodle:<doodle> --push .`
+`cd <doodle> && docker buildx build -f Dockerfile.cross --platform linux/amd64,linux/arm64,linux/arm/v8,linux/s390x,linux/ppc64le,windows/amd64 -t <username>/doodle:<doodle> --push .`
 
 This will build the Doodle for these architectures:
 * linux/amd64 (64 bit Linux native)

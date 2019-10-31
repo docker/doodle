@@ -11,7 +11,7 @@ RUN CGO_ENABLED=0 go build -a -ldflags '-extldflags "-static"' -o halloween hall
 
 FROM scratch AS release-linux
 COPY --from=builder /project/halloween /halloween
-ENTRYPOINT ["/summer"]
+ENTRYPOINT ["/halloween"]
 
 FROM mcr.microsoft.com/windows/nanoserver:1809 AS release-windows
 COPY --from=builder /project/halloween /halloween.exe

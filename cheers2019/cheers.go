@@ -303,7 +303,7 @@ mainloop:
 		default:
 			allSprites.Update()
 			allSprites.Render()
-			time.Sleep(50 * time.Millisecond)
+			time.Sleep(40 * time.Millisecond)
 		}
 		Vaccuum()
 	}

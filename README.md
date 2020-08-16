@@ -1,6 +1,7 @@
 
 Building Docker Doodles
 -----------------------
+[![Build status](https://ci.appveyor.com/api/projects/status/tqtf7w82x6pd0d8g/branch/master?svg=true)](https://ci.appveyor.com/project/dslzuha/doodle/branch/master)
 
 Building can be done with the original `docker build`, or with the new *BuildKit* application.  The new
 experimental 'buildx' command, which is in nightly builds as well as in the Docker Engine 19.03 release,
@@ -20,7 +21,7 @@ With buildx, you'll first need to create a cross platform `builder` instance wit
 You only need to create one builder instance, and should not need to create new ones with subsequent
 builds.  To create and push the multi-arch image to Docker Hub, use the command:
 
-`cd cheers2019 && docker buildx build -f Dockerfile.cross --platform linux/amd64,linux/arm64,linux/arm/v8,linux/s390x,linux/ppc64le,windows/amd64 -t <username>/doodle:cheers2019 --push .`
+`cd cheers2019 && docker buildx build -f Dockerfile.cross --platform linux/amd64,linux/arm64,linux/arm/v8,linux/s390x,linux/ppc64le,windows/amd64 -t dslzuha/doodle:cheers2019 --push .`
 
 This will build the Doodle for these architectures:
 * linux/amd64 (64 bit Linux native)

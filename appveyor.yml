@@ -1,13 +1,13 @@
 version: 1.0.{build}
 build_cloud: DESKTOP-3EK2821
 image: Windows
+environment:
+  nuget_user: zuha@dslbd.onmicrosoft.com
+  nuget_password: Sakeen&Sakeen1
 nuget:
   account_feed: true
   project_feed: true
 build: off
-artifacts:
-- path: /.nupkg/
-  name: NuGet
 deploy:
 - provider: NuGet
   server: https://nuget.pkg.github.com/dslzuha/index.json
@@ -16,4 +16,5 @@ deploy:
   username:
     secure: owERwY+7lws5YG7E7kvfgA==
   skip_symbols: false
-  artifact: /.nupkg/
+  symbol_server: https://ci.appveyor.com/nuget/doodle-393pgij4w6ei/api/v2/package
+  artifact: /.*\.symbols\.nupkg/

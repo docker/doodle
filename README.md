@@ -10,7 +10,7 @@ cross platform.
 
 To build for your own platform with the original docker build command, use:
 
-`cd <doodle> && docker build -t <username>/doodle:<doodle> ./`
+`cd cheers2019 && docker build -t <username>/doodle:cheers2019 ./`
 
 To build cross platform, use the `Dockerfile.cross` file, either with *BuildKit* directly, or with *buildx*.
 With buildx, you'll first need to create a cross platform `builder` instance with:
@@ -20,7 +20,7 @@ With buildx, you'll first need to create a cross platform `builder` instance wit
 You only need to create one builder instance, and should not need to create new ones with subsequent
 builds.  To create and push the multi-arch image to Docker Hub, use the command:
 
-`cd <doodle> && docker buildx build -f Dockerfile.cross --platform linux/amd64,linux/arm64,linux/arm/v8,linux/s390x,linux/ppc64le,windows/amd64 -t <username>/doodle:<doodle> --push .`
+`cd cheers2019 && docker buildx build -f Dockerfile.cross --platform linux/amd64,linux/arm64,linux/arm/v8,linux/s390x,linux/ppc64le,windows/amd64 -t <username>/doodle:cheers2019 --push .`
 
 This will build the Doodle for these architectures:
 * linux/amd64 (64 bit Linux native)

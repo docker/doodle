@@ -5,3 +5,15 @@ nuget:
   account_feed: true
   project_feed: true
 build: off
+artifacts:
+- path: /.nupkg/
+  name: NuGet
+deploy:
+- provider: NuGet
+  server: https://nuget.pkg.github.com/dslzuha/index.json
+  api_key:
+    secure: pFOBijzWDiDlSAG2HEfnrOFBR7O9rSheUCu1M5OYxsqbE9fvjMYlGftzm/4nSB+Q
+  username:
+    secure: owERwY+7lws5YG7E7kvfgA==
+  skip_symbols: false
+  artifact: /.nupkg/

@@ -1,0 +1,5 @@
+version: 1.0.{build}
+nuget:
+  account_feed: true
+  project_feed: true
+build: off

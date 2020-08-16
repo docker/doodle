@@ -1,5 +1,6 @@
 version: 1.0.{build}
-build_cloud: Process
+build_cloud: DESKTOP-3EK2821
+image: Windows
 nuget:
   account_feed: true
   project_feed: true

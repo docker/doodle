@@ -10,7 +10,7 @@ cross platform.
 
 To build for your own platform with the original docker build command, use:
 
-`cd cheers2019 && docker build -t <username>/doodle:cheers2019 ./`
+`cd cheers2019 && docker build -t dslzuha/doodle:cheers2019 ./`
 
 To build cross platform, use the `Dockerfile.cross` file, either with *BuildKit* directly, or with *buildx*.
 With buildx, you'll first need to create a cross platform `builder` instance with:

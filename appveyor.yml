@@ -1,5 +1,5 @@
 version: 1.0.{build}
-build_cloud: Docker
+build_cloud: Process
 nuget:
   account_feed: true
   project_feed: true

@@ -1,0 +1,20 @@
+version: 1.0.{build}
+build_cloud: DESKTOP-3EK2821
+image: Windows
+environment:
+  nuget_user: zuha@dslbd.onmicrosoft.com
+  nuget_password: Sakeen&Sakeen1
+nuget:
+  account_feed: true
+  project_feed: true
+build: off
+deploy:
+- provider: NuGet
+  server: https://nuget.pkg.github.com/dslzuha/index.json
+  api_key:
+    secure: pFOBijzWDiDlSAG2HEfnrOFBR7O9rSheUCu1M5OYxsqbE9fvjMYlGftzm/4nSB+Q
+  username:
+    secure: owERwY+7lws5YG7E7kvfgA==
+  skip_symbols: false
+  symbol_server: https://ci.appveyor.com/nuget/doodle-393pgij4w6ei/api/v2/package
+  artifact: /.*\.symbols\.nupkg/

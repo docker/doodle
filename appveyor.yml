@@ -1,20 +1,3 @@
-version: 1.0.{build}
-build_cloud: DESKTOP-3EK2821
-image: Windows
 environment:
-  nuget_user: zuha@dslbd.onmicrosoft.com
-  nuget_password: Sakeen&Sakeen1
-nuget:
-  account_feed: true
-  project_feed: true
-build: off
-deploy:
-- provider: NuGet
-  server: https://nuget.pkg.github.com/dslzuha/index.json
-  api_key:
-    secure: pFOBijzWDiDlSAG2HEfnrOFBR7O9rSheUCu1M5OYxsqbE9fvjMYlGftzm/4nSB+Q
-  username:
-    secure: owERwY+7lws5YG7E7kvfgA==
-  skip_symbols: false
-  symbol_server: https://ci.appveyor.com/nuget/doodle-393pgij4w6ei/api/v2/package
-  artifact: /.*\.symbols\.nupkg/
+  my_variable:
+    secure: PE53pQfeVgDrIbZtlslsOaigIs8uXmEMOCl12PCCETYic59G9gRJfvbGm4x1HxDR5fNFQ73rOteAzLDKDOgBi3YRZt0Sr630gYcQVyiwvqnt28Cx7wtxK0jVVffFIksBUVUogLhUhXLsU1RJWRmW1hioUzzV3e4rubO/YhULGPGgKsGFnoWNeLWomqblLw9jY4ri1Syoa8+d7ZqeySgeCIC7JSuLYXTbCoSUj7xAxcJKhrQHLGyXvCz3cvi1BICYa4BVuMgLOY18wi1yvSUNt8bKl5HZHe18wDcwx6EKfugiu6zv0YJni91PMGvMupsrmqgfseNZO9e9PvlLhYh7DDDl+xcdQ+y9fBESF1uAzr1CBH9OH/ZW9HObXPX0QOHEFfbrZs5iaB2AZ2SGOdo5ukA11JomSn7cxXwFCYGcrt0UyV1SnTnDDSxyy3uXzh7ABNFuaJOLMWc+Yvf2O5NQ2EBWyZMR2qXKNCk1NfoalU/SUVMDwlzcXL0fvPHwUNSeBe8ZL7Prcbof8hGCcKyextZwWlRTHKdE3AG+rG38nEImSfgtt45SjmW24k7zYou8/WkVbUlwPGAqTD3AeEp/JV6Vpx+ApvmWdxJny3RMiO3H9kZzEJImSOMiPVfysdn6ypxpA8CXRwpAFg0yM+A/EmuHWbqfBkdzrpDtJLmY7ns+uRg9+GSg9WLzoyEe+cB53ZXL9b7dzwQOx/gJRrxpE0mjLcExJNNQ1GXsvN07zjgg/hxM/WrDRpqVJW8aFFIxWjVJLYRff58ITbc0VPh/iNMKTGouuZbXObLqi5SpqzgT6vVYMzP4M7JGzrPuFSnW

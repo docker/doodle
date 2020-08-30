@@ -1,0 +1,5 @@
+version: 1.0.{build}
+image: Ubuntu
+nuget:
+  account_feed: true
+  project_feed: true

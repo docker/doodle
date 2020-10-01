@@ -1,5 +1,5 @@
 
-Building Docker Doodles
+Building Docker Doodles easily
 -----------------------
 
 Building can be done with the original `docker build`, or with the new *BuildKit* application.  The new

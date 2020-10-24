@@ -9,4 +9,4 @@ To try it out, run:
 
 `docker run -it --rm docker/doodle:cheers`
 
-Complete source can be found [here](https://github.com/docker/doodle).
+
